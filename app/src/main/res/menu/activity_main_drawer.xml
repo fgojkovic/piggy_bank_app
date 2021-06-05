@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/mainFragment"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/entryFragment"
+            android:icon="@drawable/ic_money"
+            android:title="@string/unos" />
+        <item
+            android:id="@+id/paymentFragment"
+            android:icon="@drawable/ic_payment"
+            android:title="@string/withdrawal" />
+        <item
+            android:id="@+id/statusFragment"
+            android:icon="@drawable/ic_money_icon"
+            android:title="@string/stanje" />
+        <item
+            android:id="@+id/savingsFragment"
+            android:icon="@drawable/ic_piggy_bank"
+            android:title="@string/savings" />
+        <item
+            android:id="@+id/accountFragment2"
+            android:icon="@drawable/ic_banks"
+            android:title="@string/my_banks" />
+        <item
+            android:id="@+id/userSettingsFragment"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/user_settings" />
+    </group>
+</menu>

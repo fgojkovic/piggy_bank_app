@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.kasicaprasica.fragments.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.kasicaprasica.fragments.MainFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_entryFragment"
+            app:destination="@id/entryFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_mainFragment_to_statusFragment"
+            app:destination="@id/statusFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_mainFragment_to_accountFragment2"
+            app:destination="@id/accountFragment2"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_mainFragment_to_userSettingsFragment"
+            app:destination="@id/userSettingsFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_mainFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_mainFragment_to_savingsFragment"
+            app:destination="@id/savingsFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/entryFragment"
+        android:name="com.example.kasicaprasica.fragments.EntryFragment"
+        android:label="@string/unos"
+        tools:layout="@layout/fragment_entry">
+        <action
+            android:id="@+id/action_entryFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statusFragment"
+        android:name="com.example.kasicaprasica.fragments.StatusFragment"
+        android:label="@string/stanje"
+        tools:layout="@layout/fragment_status">
+        <action
+            android:id="@+id/action_statusFragment_to_statusDetailsFragment"
+            app:destination="@id/statusDetailsFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment2"
+        android:name="com.example.kasicaprasica.fragments.AccountFragment"
+        android:label="@string/my_banks"
+        tools:layout="@layout/fragment_account">
+        <action
+            android:id="@+id/action_accountFragment2_to_editBankFragment"
+            app:destination="@id/editBankFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_accountFragment2_to_pictureFragment"
+            app:destination="@id/pictureFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/editBankFragment"
+        android:name="com.example.kasicaprasica.fragments.EditBankFragment"
+        android:label="@string/edit_bank"
+        tools:layout="@layout/fragment_edit_bank" />
+    <fragment
+        android:id="@+id/userSettingsFragment"
+        android:name="com.example.kasicaprasica.fragments.UserSettingsFragment"
+        android:label="@string/user_settings"
+        tools:layout="@layout/fragment_user_settings" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.kasicaprasica.fragments.PaymentFragment"
+        android:label="@string/withdrawal"
+        tools:layout="@layout/fragment_payment" />
+    <fragment
+        android:id="@+id/statusDetailsFragment"
+        android:name="com.example.kasicaprasica.fragments.StatusDetailsFragment"
+        android:label="fragment_status_details"
+        tools:layout="@layout/fragment_status_details" />
+    <fragment
+        android:id="@+id/savingsFragment"
+        android:name="com.example.kasicaprasica.fragments.SavingsFragment"
+        android:label="@string/savings"
+        tools:layout="@layout/fragment_savings" />
+    <fragment
+        android:id="@+id/pictureFragment"
+        android:name="com.example.kasicaprasica.fragments.PictureFragment"
+        android:label="fragment_picture"
+        tools:layout="@layout/fragment_picture" />
+
+</navigation>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    tools:context=".fragments.PaymentFragment"
+    android:background="@color/Bisque"
+    android:layout_marginTop="?android:attr/actionBarSize">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
+
+
+    <!--<TextView
+        android:id="@+id/naslov_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="5sp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/withdrawal"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="@color/Black"
+        />-->
+
+        <RelativeLayout
+            android:id="@+id/payment_top_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/payment_odabir_banke_polje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/payment_bank_selection"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/choose_bank"
+                android:layout_margin="5dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/payment_auto_complete_bank_selection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:background="@color/Bisque"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+           <!-- <TextView
+                android:id="@+id/payment_odabir_banke_teks_polje"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:text="@string/choose_bank"
+                android:textStyle="bold"
+                android:textColor="@color/Black"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"/>
+
+            <Spinner
+                android:id="@+id/payment_banks_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />-->
+
+        </LinearLayout>
+
+       <!-- <LinearLayout
+            android:id="@+id/payment_odabir_valute_polje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/payment_odabir_banke_polje"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/payment_odabir_valute_tekst_polje"
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/choose_type_of_money"
+                android:textColor="@color/Black"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+
+            <Spinner
+                android:id="@+id/payment_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>-->
+
+
+        <LinearLayout
+            android:id="@+id/payment_filterPolje"
+            android:layout_below="@id/payment_odabir_banke_polje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/payment_currency_selection"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/choose_currency"
+                android:layout_margin="5dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/payment_auto_complete_currency_selection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:background="@color/Bisque"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--<TextView
+                android:id="@+id/payment_odabir_value_teks_polje"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:text="@string/choose_currency"
+                android:textStyle="bold"
+                android:textColor="@color/Black"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"/>
+
+
+            <Spinner
+                android:id="@+id/payment_currencies_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />-->
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/payment_only_selected_currency_row"
+            android:layout_below="@id/payment_filterPolje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/payment_switch"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/use_only_selected_currency"
+                android:textColor="@color/Black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                />
+
+           <!-- <com.google.android.material.switchmaterial.SwitchMaterial
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/use_only_selected_currency"
+                android:textColor="@color/Black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                />-->
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/payment_entry_row"
+            android:layout_below="@id/payment_only_selected_currency_row"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/payment_entry_edit_text"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:hint="@string/your_amount_here"
+                android:autofillHints="100.00" />
+
+        </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/payment_prepare_button_row"
+            android:layout_below="@id/payment_top_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/payment_prepare_button"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/custom_button"
+                android:gravity="center"
+                android:text="@string/prepare"
+                android:textColor="@color/White"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/payment_list_row"
+            android:layout_below="@id/payment_prepare_button_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:id="@+id/payment_searched_amount_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/payment_searched_amount_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/Black"
+                    android:textSize="18sp"
+                    android:text="@string/requested_amount"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:id="@+id/payment_searched_amount_text_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/Black"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/payment_money_recycler_view"
+                android:layout_below="@id/payment_searched_amount_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginBottom="15dp"
+                android:focusable="false"/>
+
+
+
+            <LinearLayout
+                android:id="@+id/payment_over_the_limit_row"
+                android:layout_below="@id/payment_money_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/payment_over_the_limit_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/Black"
+                    android:textSize="18sp"
+                    android:text="@string/over_the_limit"
+                    android:padding="5dp"
+                    android:layout_margin="5dp" />
+
+                <TextView
+                    android:id="@+id/payment_over_the_limit_text_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/Black"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/payment_no_money_in_bank_row"
+                android:layout_below="@id/payment_over_the_limit_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:id="@+id/payment_no_money_in_bank_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="25sp"
+                    android:text="@string/no_money_in_bank"
+                    android:padding="5dp"
+                    android:layout_margin="5dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/payment_bottom_row_buttons"
+                android:layout_below="@id/payment_no_money_in_bank_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/payment_prepare_another_amount_button"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/custom_button"
+                    android:gravity="center"
+                    android:text="@string/prepare_another_amount"
+                    android:textColor="@color/White"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/payment_pay_out_button"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/custom_button"
+                    android:gravity="center"
+                    android:text="@string/pay_out"
+                    android:textColor="@color/White"
+                    android:textSize="20sp"
+                   />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

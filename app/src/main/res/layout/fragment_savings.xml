@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    tools:context=".fragments.SavingsFragment"
+    android:background="@color/Bisque"
+    android:layout_marginTop="?android:attr/actionBarSize">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ProgressBar
+            android:id="@+id/savings_progres_bar_circle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible"/>
+
+    <RelativeLayout
+        android:id="@+id/savings_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/savings_bank_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="1dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/savings_bank_selection"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/choose_bank"
+                android:layout_margin="5dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/savings_auto_complete_bank_selection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:background="@color/Bisque"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/savings_currency_row"
+            android:layout_below="@id/savings_bank_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="1dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/savings_currency_selection"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/choose_currency"
+                android:layout_margin="5dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/savings_auto_complete_currency_selection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:background="@color/Bisque"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--<TextView
+                android:id="@+id/savings_currency_label"
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:text="@string/choose_currency"
+                android:textStyle="bold"
+                android:textColor="@color/Black"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"/>
+
+
+            <Spinner
+                android:id="@+id/savings_currency_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />-->
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/savings_only_selected_currency_row"
+            android:layout_below="@id/savings_currency_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="1dp">
+
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/savings_switch"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/use_only_selected_currency"
+                android:textColor="@color/Black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/classic_border_colored"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/savings_radio_group_row"
+            android:layout_below="@id/savings_only_selected_currency_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="1dp">
+
+
+           <RadioGroup
+               android:id="@+id/savings_radio_group"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:weightSum="4"
+               android:gravity="center"
+               android:background="@drawable/classic_border_colored"
+               android:layout_marginStart="5dp"
+               android:layout_marginEnd="5dp"
+               android:paddingStart="10dp"
+               android:paddingEnd="10dp">
+
+               <RadioButton
+                   android:id="@+id/savings_radio_button1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="30dp"
+                   android:layout_weight="1"
+                   android:text="@string/hourly"
+                   android:textColor="@color/Black"
+                   android:checked="true"/>
+
+               <RadioButton
+                   android:id="@+id/savings_radio_button2"
+                   android:layout_width="wrap_content"
+                   android:layout_height="30dp"
+                   android:layout_weight="1"
+                   android:text="@string/daily"
+                   android:textColor="@color/Black" />
+
+               <RadioButton
+                   android:id="@+id/savings_radio_button3"
+                   android:layout_width="wrap_content"
+                   android:layout_height="30dp"
+                   android:layout_weight="1"
+                   android:text="@string/monthly"
+                   android:textColor="@color/Black"/>
+
+               <RadioButton
+                   android:id="@+id/savings_radio_button4"
+                   android:layout_width="wrap_content"
+                   android:layout_height="30dp"
+                   android:layout_weight="1"
+                   android:text="@string/yearly"
+                   android:textColor="@color/Black"/>
+           </RadioGroup>
+
+
+        </LinearLayout>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/savings_chart_test"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="300dp"
+                android:layout_margin="10dp"
+                android:layout_below="@id/savings_radio_group_row">
+
+            </com.github.mikephil.charting.charts.LineChart>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

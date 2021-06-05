@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.EditBankFragment"
+    android:fillViewport="true">
+    <!--android:background="@color/Bisque"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="@string/edit_bank"
+            android:textColor="@color/Black"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:text="@string/bank_name"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/bank_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="@string/bank_name"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+         <!--<LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bank_status"
+                android:gravity="center_horizontal"
+                android:textColor="@color/Black"
+                android:layout_weight="2"/>
+
+        <EditText
+            android:id="@+id/bank_value_edit_text"
+            android:hint="@string/bank_status"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"/>
+
+         </LinearLayout>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/edit_bank_red_za_gumbe"
+            android:layout_width="match_parent"
+            android:layout_height="463dp"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--<Button
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_width="100dp"
+                android:layout_height="75dp"
+                android:background="@drawable/custom_button"
+                android:text="@string/back_button"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="@color/White"
+                />-->
+
+            <ImageView
+                android:id="@+id/prostor_za_sliku_edit_bank"
+                android:layout_width="171dp"
+                android:layout_height="272dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginEnd="140dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageButton
+                android:id="@+id/take_picture_button_edit_bank"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="69dp"
+                android:background="@mipmap/take_picture_button_squared"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/insert_picture_button_edit_bank"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/prostor_za_sliku_edit_bank"
+                app:layout_constraintVertical_bias="0.103" />
+
+            <ImageButton
+                android:id="@+id/insert_picture_button_edit_bank"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="63dp"
+                android:layout_marginEnd="69dp"
+                android:background="@mipmap/insert_picture_button_squared"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/take_picture_button_edit_bank"
+                app:layout_constraintTop_toBottomOf="@+id/prostor_za_sliku_edit_bank"
+                app:layout_constraintVertical_bias="0.103" />
+
+            <Button
+                android:id="@+id/save_button_edit_bank"
+                android:layout_width="125dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="@string/save_button"
+                android:textColor="@color/White"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/prostor_za_sliku_edit_bank"
+                app:layout_constraintVertical_bias="0.8" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</ScrollView>

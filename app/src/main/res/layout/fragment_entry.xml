@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".fragments.EntryFragment"
+    android:id="@+id/entryFragment"
+    android:layout_marginTop="?android:attr/actionBarSize">
+    <!-- android:background="@color/Bisque" -->
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/entry_progres_bar_circle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:id="@+id/odabir_banke_polje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/entry_bank_selection"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/choose_bank"
+                android:layout_margin="5dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_bank_selection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:background="@color/Bisque"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--<TextView
+                android:id="@+id/entry_bank_selection_text"
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:text="@string/choose_bank"
+                android:textStyle="bold"
+                android:textColor="@color/Black"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"/>
+
+            <Spinner
+                android:id="@+id/odabir_banke_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/odabir_valute_polje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/odabir_banke_polje"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/entry_type_selection"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/choose_type_of_money"
+                android:layout_margin="5dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_complete_type_selection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:background="@color/Bisque"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--<TextView
+                android:id="@+id/entry_type_selection_text"
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/choose_type_of_money"
+                android:textColor="@color/Black"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />-->
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/filterPolje"
+            android:layout_below="@id/odabir_valute_polje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/entry_currency_selection"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/choose_currency"
+                android:layout_margin="5dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_currency_selection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:background="@color/Bisque"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--<TextView
+                android:id="@+id/entry_currency_selection_text"
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:text="@string/choose_currency"
+                android:textStyle="bold"
+                android:textColor="@color/Black"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"/>
+
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />-->
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reciklaza"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_below="@id/filterPolje"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:scrollbars="vertical"
+            android:scrollbarSize="5dp"
+            android:scrollbarStyle="insideInset" />
+
+
+
+        <LinearLayout
+            android:id="@+id/predzadnjiRed"
+            android:layout_below="@id/reciklaza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/zbrojTekst"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/zadnjiRed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/predzadnjiRed">
+
+            <Button
+                android:id="@+id/entry_confirm_button"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/custom_button"
+                android:gravity="center"
+                android:text="@string/insert"
+                android:textColor="@color/White"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

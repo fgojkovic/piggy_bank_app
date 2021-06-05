@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/Bisque"
+    android:fillViewport="true"
+    tools:context=".fragments.StartFragment"
+    android:animateLayoutChanges="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+   <!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:animateLayoutChanges="true">
+
+        <TextView
+            android:id="@+id/login_tekst"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:text="@string/create_account"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="@color/Black"
+            />
+
+    <EditText
+        android:id="@+id/username_input"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:autofillHints="@string/username"
+        android:hint="@string/username"
+        android:background="@drawable/classic_border"
+        android:textColorHint="@color/Gray"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:hint="@string/password"
+        android:autofillHints="@string/password"
+        android:background="@drawable/classic_border"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/Gray"
+        android:textStyle="bold"
+        android:inputType="textPassword"/>
+
+        <!--<EditText
+            android:id="@+id/first_name_input"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:autofillHints="@string/first_name"
+            android:hint="@string/first_name"
+            android:background="@drawable/classic_border"/>
+
+
+        <EditText
+            android:id="@+id/last_name_input"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:autofillHints="@string/last_name"
+            android:hint="@string/last_name"
+            android:background="@drawable/classic_border"/>-->
+
+        <LinearLayout
+            android:id="@+id/red_za_def_curr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/classic_border"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/default_value_label"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:text="@string/choose_def_value"
+                android:textSize="15sp"
+                android:textColor="@color/Gray"
+                android:gravity="center"
+                android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/default_value_input"
+            android:layout_width="125dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:autofillHints="@string/default_value"
+            />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/create_acc_button"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/create"
+            android:textAllCaps="true"
+            android:background="@drawable/custom_button"
+            android:textStyle="bold"
+            android:textColor="@color/White"
+            />
+
+    </LinearLayout>
+
+    <!--</RelativeLayout>-->
+
+</ScrollView>

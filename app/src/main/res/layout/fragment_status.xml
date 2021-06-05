@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".fragments.StatusFragment"
+    android:background="@color/Bisque"
+    android:layout_marginTop="?android:attr/actionBarSize">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+       <!-- <TextView
+            android:id="@+id/naslov_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/stanje"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:textColor="@color/Black"
+            />-->
+
+        <!--<androidx.core.widget.ContentLoadingProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>-->
+
+        <!--<androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/status_content_progres_bar_circle"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible"
+            android:layout_centerInParent="true"/>-->
+
+
+
+        <LinearLayout
+            android:id="@+id/status_filter_red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/status_bank_selection"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/choose_bank"
+                android:layout_margin="5dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/status_auto_complete_bank_selection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:background="@color/Bisque"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--<TextView
+                android:id="@+id/status_label_1"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:text="@string/choose_bank"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/Black"
+                />
+
+            <Spinner
+                android:id="@+id/status_bank_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />-->
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/status_progres_bar_circle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/status_reciklaza"
+            android:layout_below="@id/status_filter_red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"/>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/status_total_money_by_curr_red"
+            android:layout_below="@id/status_reciklaza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/status_naslov_all_currency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/total_by_single_currency"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/Black"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/status_pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal"
+                android:scrollbarSize="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

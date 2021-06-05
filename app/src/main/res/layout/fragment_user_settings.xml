@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.UserSettingsFragment"
+    android:fillViewport="true"
+    android:background="@color/Bisque"
+    android:layout_marginTop="?android:attr/actionBarSize">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:gravity="center_horizontal"
+                android:textColor="@color/Black"
+                android:layout_weight="2"/>
+
+        <EditText
+            android:id="@+id/user_settings_user_edit_text"
+            android:hint="@string/username"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:gravity="center_horizontal"
+            android:textColor="@color/Black"
+            android:layout_weight="2"/>
+
+        <EditText
+            android:id="@+id/user_settings_pass_edit_text"
+            android:hint="@string/password"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="textPassword"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/user_settings_currency_selection"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/choose_currency"
+            android:layout_margin="5dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/user_settings_auto_complete_currency_selection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:background="@color/Bisque"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/edit_bank_red_za_gumbe"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:gravity="center">
+
+            <!--<Button
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_width="100dp"
+                android:layout_height="75dp"
+                android:background="@drawable/custom_button"
+                android:text="@string/back_button"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="@color/White"
+                />-->
+
+            <Button
+                android:id="@+id/save_button_user_settings"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:background="@drawable/custom_button"
+                android:text="@string/save_button"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="@color/White"
+                android:layout_marginBottom="15dp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/responseText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/user_settings"
+            android:textColor="@color/Black"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

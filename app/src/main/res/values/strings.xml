@@ -1,0 +1,112 @@
+<resources>
+
+    <string name="my_dev_mail">filip.gojkovic.dev@gmail.com</string>
+
+    <string name="app_name">Piggy Bank</string>
+    <string name="app_name_welcome">Piggy Bank App</string>
+    <string name="nekiTekst">Unos</string>
+    <string name="kuna">Kuna</string>
+    <string name="x"> x 0</string>
+    <string name="rezultat_unosa">0 KN</string>
+    <string name="unos">Entry</string>
+    <string name="unesi">Enter</string>
+    <string name="stanje">Status</string>
+    <string name="isplata">Payment</string>
+    <string name="my_acc">My Account</string>
+    <string name="my_banks">My Banks</string>
+    <string name="add_bank">Add Piggy Bank</string>
+    <string name="bank_name">Naziv kasice prasice:</string>
+    <string name="cancel">Odustani</string>
+    <string name="list_banks">List all banks</string>
+    <string name="ordinal_number">Redni broj:</string>
+    <string name="date_of_creation">Datum otvaranja:</string>
+    <string name="bank_status">Iznos:</string>
+    <string name="add_bank_form_tag">AddBankForm</string>
+    <string name="list_bank_tag">ListBank</string>
+    <string name="login_tekst">LOGIN</string>
+    <string name="create_account">Create account</string>
+    <string name="create_account_condition">If you don\'t have an account. Press a button below to create one.</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="default_value">Default value</string>
+    <string name="default_currency">Default Currency</string>
+    <string name="choose_def_value">Choose default Currency</string>
+    <string name="create">Create</string>
+    <string name="choose_bank">Choose bank</string>
+    <string name="choose_currency">Choose currency</string>
+    <string name="choose_type_of_money">Choose type</string>
+    <string name="back_button">Natrag</string>
+    <string name="save_button">Spremi</string>
+    <string name="settings">Settings</string>
+    <string name="settings_hr">Postavke</string>
+    <string name="user_settings">User settings</string>
+    <string name="edit_bank">Edit bank</string>
+    <string name="money_list">Money list</string>
+    <string name="savings">Savings</string>
+    <string name="withdrawal">Withdrawal</string>
+    <string name="total_by_single_currency">Total by currency</string>
+    <string name="insert">Insert</string>
+    <string name="over_the_limit">Over the limit:</string>
+
+    <string name="copyright">Copyright 2021©®</string>
+
+    <string name="pay_out">Pay Out!</string>
+    <string name="your_amount_here">Your amount here…</string>
+    <string name="prepare">Prepare</string>
+    <string name="prepare_another_amount">Prepare another amount</string>
+    <string name="requested_amount">Requested amount:</string>
+    <string name="no_money_in_bank">There is no money in bank!</string>
+    <string name="use_only_selected_currency">Use only selected currency</string>
+
+    <string name="picture_header_title">Money picture</string>
+    <string name="amount_of_money_header_title">Amount of money</string>
+    <string name="total_value_header_title">Total value</string>
+
+    <string name="picture_header_title_short">Picture</string>
+    <string name="amount_of_money_header_title_short">Amount</string>
+    <string name="total_value_header_title_short">Value</string>
+
+    <!-- Content description -->
+    <string name="opis_dvije_kune">Kovanica od dvije kune</string>
+
+    <string name="hourly">Hourly</string>
+    <string name="daily">Daily</string>
+    <string name="monthly">Monthly</string>
+    <string name="yearly">Yearly</string>
+
+    <string name="home">Home</string>
+
+    <!-- Miscellaneous Preferences -->
+    <string name="miscellaneous">Miscellaneous</string>
+    <string name="dark_mode">Dark mode</string>
+
+
+    <string-array name="type_of_money">
+        <item>Coin</item>
+        <item>Banknote</item>
+    </string-array>
+
+    <string-array name="type_of_curr">
+        <item>Hrvatska kuna</item>
+        <item>Euro</item>
+        <item>US dollar</item>
+    </string-array>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+</resources>

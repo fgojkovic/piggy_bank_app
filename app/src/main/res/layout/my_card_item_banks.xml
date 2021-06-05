@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/redLayoutBanks">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/Bisque"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:background="@drawable/classic_border"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_marginEnd="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="5dp"
+                tools:layout_editor_absoluteY="5dp">
+
+
+                <LinearLayout
+                    android:id="@+id/prvi_red_bank_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:layout_constraintBottom_toTopOf="@+id/drugi_red_bank_row"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/redni_broj_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/ordinal_number"
+                        android:textColor="@color/Black"
+                        android:textSize="15sp"
+                        tools:layout_editor_absoluteX="10dp" />
+
+                    <TextView
+                        android:id="@+id/redni_broj"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/ordinal_number"
+                        android:textColor="@color/Black"
+                        android:textSize="15sp"
+                        tools:layout_editor_absoluteX="165dp" />
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="prvi_red_bank_row" />
+
+                <LinearLayout
+                    android:id="@+id/drugi_red_bank_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:layout_constraintBottom_toTopOf="@+id/treci_red_bank_row"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/prvi_red_bank_row">
+
+                    <TextView
+                        android:id="@+id/datum_otvaranja_banke_tekst"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/date_of_creation"
+                        android:textColor="@color/Black"
+                        android:textSize="15sp"
+                        tools:layout_editor_absoluteX="13dp"
+                        tools:layout_editor_absoluteY="40dp" />
+
+                    <TextView
+                        android:id="@+id/datum_otvaranja_banke_tekst_polje"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/date_of_creation"
+                        android:textColor="@color/Black"
+                        android:textSize="15sp"
+                        tools:layout_editor_absoluteX="165dp"
+                        tools:layout_editor_absoluteY="40dp" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="drugi_red_bank_row" />
+
+
+                <LinearLayout
+                    android:id="@+id/treci_red_bank_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:layout_constraintBottom_toTopOf="@+id/cetvrti_red_bank_row"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/drugi_red_bank_row">
+
+                    <TextView
+                        android:id="@+id/naziv_banke_tekst"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/bank_name"
+                        android:textColor="@color/Black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/naziv_banke"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/bank_name"
+                        android:textColor="@color/Black"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="treci_red_bank_row" />
+
+
+                <LinearLayout
+                    android:id="@+id/cetvrti_red_bank_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/treci_red_bank_row">
+
+                    <TextView
+                        android:id="@+id/ukupan_iznos_default_curr_tekst_polje_tekst"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/bank_status"
+                        android:textColor="@color/Black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/ukupan_iznos_default_curr_tekst_polje"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/bank_status"
+                        android:textColor="@color/Black"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/classic_border"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="cetvrti_red_bank_row" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cetvrti_red_bank_row">
+
+                    <ImageButton
+                        android:id="@+id/edit_name_gumb_bank_list"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:background="@mipmap/edit_button"
+                        android:visibility="visible" />
+
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:id="@+id/ponisti_gumb_bank_list"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:background="@mipmap/kanta_za_smece"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

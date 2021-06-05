@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".fragments.StatusDetailsFragment"
+    android:background="@color/Bisque"
+    android:layout_marginTop="?android:attr/actionBarSize">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/naslov_status_detalji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="25dp"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:textColor="@color/Black"
+            />
+
+        <ProgressBar
+            android:id="@+id/status_details_progres_bar_circle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/status_detalji_reciklaza"
+            android:layout_below="@id/naslov_status_detalji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    tools:context=".fragments.AccountFragment"
+    android:layout_marginTop="?android:attr/actionBarSize">
+    <!-- android:background="@color/Bisque"-->
+
+    <RelativeLayout
+        android:id="@+id/omotac_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
+
+        <ProgressBar
+            android:id="@+id/account_progres_bar_circle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible"/>
+
+
+       <!-- <TextView
+            android:id="@+id/tekst1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/my_banks"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="@color/Black"
+            android:background="@color/Bisque"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>-->
+
+        <!--Prvi red bivšeg dizajna
+        <RelativeLayout
+            android:id="@+id/add_bank_linear"
+            android:layout_below="@id/tekst1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:id="@+id/add_bank_tekst"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="@string/add_bank"
+                android:textSize="35sp"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:layout_alignParentStart="true"
+                />
+
+            <ImageButton
+                android:id="@+id/plusic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:background="@mipmap/add_button"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="40dp"/>
+
+        </RelativeLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/add_bank_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:tag="@string/add_bank_form_tag"
+            android:background="@drawable/classic_border"
+            android:padding="3dp"
+            android:layout_margin="5dp">
+            <!--android:orientation="horizontal"-->
+
+
+            <TextView
+                android:id="@+id/add_bank_name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bank_name"
+                android:textSize="25sp"
+                android:textColor="@color/Black"
+                android:padding="10dp"
+                android:gravity="start"/>
+
+            <EditText
+                android:id="@+id/add_bank_input"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/add_bank_name_text"
+                android:layout_centerInParent="true"
+                android:inputType="textCapSentences"/>
+
+            <ImageView
+                android:id="@+id/prostor_za_sliku"
+                android:layout_below="@id/add_bank_input"
+                android:layout_width="114dp"
+                android:layout_height="203dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/prostor_za_gumbe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/prostor_za_sliku"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/prihvati_acc"
+                        android:layout_width="150dp"
+                        android:layout_height="65dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/custom_button"
+                        android:gravity="center"
+                        android:text="@string/unesi"
+                        android:textColor="@color/White"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/take_picture_button"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+            <!--<Button
+                android:id="@+id/take_picture"
+                android:layout_width="150dp"
+                android:layout_height="65dp"
+                android:background="@mipmap/take_picture_button_squared_dog_eared"
+                android:text="@string/unesi"
+                android:textColor="@color/White"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                android:gravity="center" />-->
+
+                    <ImageButton
+                        android:id="@+id/take_picture_button"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@mipmap/take_picture_button_squared"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--<Button
+                    android:id="@+id/odustani_acc"
+                    android:layout_width="150dp"
+                    android:layout_height="65dp"
+                    android:background="@drawable/custom_button"
+                    android:text="@string/cancel"
+                    android:textColor="@color/White"
+                    android:textSize="20sp"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    />-->
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <!-- Drugi red bivšeg dizajna
+        <RelativeLayout
+            android:id="@+id/list_bank_linear"
+            android:layout_below="@id/add_bank_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/list_bank_tekst"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="@string/list_banks"
+                android:textSize="35sp"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:layout_alignParentStart="true"
+                />
+
+            <ImageButton
+                android:id="@+id/plusic_list"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:background="@mipmap/add_button"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="40dp"/>
+
+        </RelativeLayout>-->
+
+
+        <!--<RelativeLayout
+            android:id="@+id/list_all_banks"
+            android:layout_below="@id/tekst1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:tag="@string/list_bank_tag">
+            &lt;!&ndash;android:orientation="horizontal"&ndash;&gt;
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lista_banka_reciklaza"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Bisque"/>
+
+        </RelativeLayout>-->
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/lista_banka_reciklaza"
+            android:layout_below="@id/add_bank_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            android:scrollbarSize="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"/>
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
