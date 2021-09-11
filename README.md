@@ -6,6 +6,6 @@
  - Plan your savings. 
  - Use multiple banks.
  
- As of june the 5th application is still not developed as i would like. If I find more time would like to complete it.
+ As of june the 5th 2021 application is still not developed as i would like. If I find more time would like to complete it.
  
   - Application was using currency api call from https://api.ratesapi.io/ which doesn't work any more.
